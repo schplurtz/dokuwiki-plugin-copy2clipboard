@@ -1,0 +1,6 @@
+/tests              export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/*.png              export-ignore
+/clip.svg           export-ignore
+/copy2clipboard     export-ignore
