@@ -1,0 +1,56 @@
+====== copy2clipboard Plugin ======
+
+---- plugin ----
+description: Add a clipboard button to <code> and <file> blocks that copies text to the clipboard
+author     : schplurtz 
+email      : schplurtz@laposte.net 
+type       : javascript
+lastupdate : 2020-12-07
+compatible : elenor of tsort, frusterick manners, greebo, hogfather
+depends    : 
+conflicts  : 
+similar    : copy2code, codeclipboard
+tags       : clipboard, copy
+
+downloadurl: https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/zipball/master
+bugtracker : https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/issues
+sourcerepo : https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/
+donationurl: 
+
+screenshot_img : https://raw.github.com/schplurtz/dokuwiki-plugin-copy2clipboard/screenshot.png
+----
+
+===== Example/Usage =====
+
+  - Install the plugin
+  - Enjoy !
+
+Once installed, it will automatically add a <<copy to clipboard>> button to every ''%%<code>%%'' or ''%%<file>%%'' [[:syntax#Code Blocks|code block]] as shown on the screenshot below.
+
+{{https://raw.github.com/schplurtz/dokuwiki-plugin-copy2clipboard/screenshot.png|screenshot}}
+
+===== Installation =====
+
+This plugin does not require any DokuWiki or PHP component. As it is made of pure, moderately modern((as of december 2020)) javascript and only requires a fairly decent browser, it should work with any DokuWiki version.
+
+Install the plugin using the [[plugin:plugin|Plugin Manager]] and the download URL above, which points to latest version of the plugin. Refer to [[:Plugins]] on how to install plugins manually.
+
+===== Configuration and Settings =====
+
+There is nothing to configure. If you want that this plugin uses your language, please add a translation on https://translate.dokuwiki.org/plugin/copy2clipboard .
+
+===== Change Log =====
+
+{{rss>https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/commits/master.atom date}}
+
+===== Known Bugs and Issues =====
+
+Issues, bug, suggestions should onlu be discussed on [[https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/issues|github issues]] page.
+
+===== FAQ =====
+
+
+===== Discussion =====
+
+Please, either use [[https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/issues|github issue]] page or use the [[.:dokuwiki-plugin-copy2clipboard:discussion|discussion]] page so this page stays as clear and simple as possible.
+

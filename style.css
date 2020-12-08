@@ -1,0 +1,32 @@
+div.dokuwiki {
+  pre.cp2clip {
+    position: relative;
+  }
+  button.cp2clip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #bbb url( 'clipmini.svg' ) 0 0 no-repeat;
+    background-size: 12px; /*15px;*/
+    width: 13px; /*17px;*/
+    height: 18px; /*22px;*/
+  }
+}
+.cp2clipmsg {
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%,0);
+  position: fixed;
+  padding: .7em;
+  border-radius: 7px;
+  font-size: 1.5rem;
+}
+#cp2clipok {
+  background: #00b871; /* #00fa9a; /* X11 MediumSpringGreen */
+  color: #111;
+}
+#cp2clipnok {
+  background: #c71585; /* X11 MediumVioletRed */
+  color: #ccc;
+}
+
