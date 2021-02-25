@@ -16,7 +16,7 @@ jQuery(function() {
             jQuery(this).remove(); 
         });
     }, 1500);
-  }
+  };
   document.querySelectorAll('pre.code,pre.file').forEach(function(elem) {
     elem.classList.add('cp2clip');
     let cp = document.createElement('button');
@@ -37,5 +37,5 @@ jQuery(function() {
       }
     })
   })
-})
+});
 
