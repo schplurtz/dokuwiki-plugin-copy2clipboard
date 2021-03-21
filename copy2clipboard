@@ -9,7 +9,7 @@ lastupdate : 2020-12-07
 compatible : elenor of tsort, frusterick manners, greebo, hogfather
 depends    : 
 conflicts  : 
-similar    : copy2code, codeclipboard
+similar    : copycode, codeclipboard
 tags       : clipboard, copy
 
 downloadurl: https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/zipball/master
