@@ -35,11 +35,10 @@ jQuery(function() {
       // crap. And yes it could remove a legitimate NBSP ; chances are low though.
       text = text.replace(/^\u00A0$/gm, "");
       await navigator.clipboard.writeText(text);
-      // event.target.textContent = 'Copied to clipboard'
-      console.log( "copié >>>" + text + "<<<" );
+      // console.log( "copié >>>" + text + "<<<" );
       messageBox('cp2clipok', LANG.plugins.copy2clipboard.copied);
     } catch (err) {
-      console.error('Failed to copy!', err);
+      // console.error('Failed to copy!', err);
       messageBox('cp2clipnok', LANG.plugins.copy2clipboard.error);
     }
   };
