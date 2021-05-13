@@ -26,15 +26,9 @@ appropriate.
 *  https://css-tricks.com/position-sticky-2/
 
 ----
-Copyright (C) Schplurtz le Déboulonné <Schplurtz@laposte.net>
+Copyright (C) 2020, 2021 Schplurtz le Déboulonné <Schplurtz@laposte.net>
 
 This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; version 2 of the License
+it under the terms of the CECILL 2.1 free license. See files
+LICENSE and LICENSE-fr for the details.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-See the LICENSE file for details

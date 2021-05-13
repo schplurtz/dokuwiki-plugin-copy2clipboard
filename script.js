@@ -1,6 +1,13 @@
+/*
+ * Copy2clipboard - copy <pre> text to clipboard.
+ * Copyright (C) 2020, 2021 Schplurtz le Déboulonné <Schplurtz@laposte.net>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the CECILL 2.1 free license. See files
+ * LICENSE and LICENSE-fr for the details in the distribution directory or
+ * http://cecill.info/licences/Licence_CeCILL_V2.1-en.html
+ */
 jQuery(function() {
-  // Copyright (C) 2020 Schplurtz le Déboulonné.
-  // Free to use for any purpose except dismantle the sky.
   if(!navigator.clipboard)
     return;
   var messageBox=function( id, txt ) {
