@@ -2,20 +2,20 @@
 
 ---- plugin ----
 description: Add a clipboard button to <code> and <file> blocks that copies text to the clipboard
-author     : schplurtz 
-email      : schplurtz@laposte.net 
+author     : Schplurtz le Déboulonné
+email      : Schplurtz-AT-Laposte•net
 type       : javascript
-lastupdate : 2020-12-07
+lastupdate : 2021-05-13
 compatible : elenor of tsort, frusterick manners, greebo, hogfather
-depends    : 
-conflicts  : 
+depends    :
+conflicts  :
 similar    : copycode, codeclipboard
 tags       : clipboard, copy
 
 downloadurl: https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/zipball/master
 bugtracker : https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/issues
 sourcerepo : https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/
-donationurl: 
+donationurl:
 
 screenshot_img : https://raw.github.com/schplurtz/dokuwiki-plugin-copy2clipboard/screenshot.png
 ----
@@ -25,19 +25,51 @@ screenshot_img : https://raw.github.com/schplurtz/dokuwiki-plugin-copy2clipboard
   - Install the plugin
   - Enjoy !
 
-Once installed, it will automatically add a <<copy to clipboard>> button to every ''%%<code>%%'' or ''%%<file>%%'' [[:syntax#Code Blocks|code block]] as shown on the screenshot below.
+Once installed, it will automatically add a <<copy to clipboard>>
+button to every ''%%<code>%%'' or ''%%<file>%%'' [[:wiki:syntax#Code Blocks|code block]]
+as shown on the screenshot below.
 
 {{https://raw.github.com/schplurtz/dokuwiki-plugin-copy2clipboard/screenshot.png|screenshot}}
 
+===== Description =====
+
+This extension add a clipboard button to ''%%<code>%%'' and ''%%<file>%%'' blocks that copies text to the clipboard
+
+This is already done by other extensions, [[copycode]] and [[codeclipboard]].
+However, it has the following advantages over the other extensions (beeing horribly partial here ;-)) :
+
+  - made of pure javascript, there is no PHP requirement, no DokuWiki requirement. It will work on any DokuWiki version, with any PHP version,
+  - It uses a relatively new but stable javacript API, so it should work for years before it becomes incompatible with navigators,
+     * Thus, as far as I can see, there will be no need to update this extension in the next millenia,
+  - It correctly copies codes formatted by geshi((This is the library component used by DokuWiki to highlight syntax)). if you encounter the dreaded "Unrecognized character \xC2" error when you copy code to perl or python, manually or with other extensions, then copy2clipboard is the extension you need,
+  - It makes sure line endings are adapted to the os the navigator is running on. This eliminates powershell bug [[https://github.com/PowerShell/PSReadLine/issues/496|496]] and [[https://github.com/PowerShell/PowerShell/issues/3816|3816]] where lines are pasted in reverse order.
+  - It has no known bugs, yet.
+
 ===== Installation =====
 
-This plugin does not require any DokuWiki or PHP component. As it is made of pure, moderately modern((as of december 2020)) javascript and only requires a fairly decent browser, it should work with any DokuWiki version.
+Install the plugin using the [[plugin:plugin|Plugin Manager]] and
+the download URL above, which points to latest version of the plugin.
+Refer to [[:Plugins]] on how to install plugins manually.
 
-Install the plugin using the [[plugin:plugin|Plugin Manager]] and the download URL above, which points to latest version of the plugin. Refer to [[:Plugins]] on how to install plugins manually.
+This plugin does not require any DokuWiki or PHP component. As it
+is made of pure javascript, it should work with any DokuWiki version.
+
+===== Browser compatibility =====
+
+Copy2code is javascript only and requires that your browser supports
+writing text to the clipboard via the clipboard API. As of 2021,
+it seems to me that this is a not so old feature. Check the
+[[https://developer.mozilla.org/en-US/docs/Web/API/Clipboard#browser_compatibility|Clipboard Browser compatibility]]
+table on MDN for the major browser compatibility
+status. If you can't use your browser, either update your browser,
+use another extension ([[copycode]] and [[codeclipboard]] for
+example), or send a simple fix as a PR on github.
 
 ===== Configuration and Settings =====
 
-There is nothing to configure. If you want that this plugin uses your language, please add a translation on https://translate.dokuwiki.org/plugin/copy2clipboard .
+There is nothing to configure. If you want that this plugin uses
+your language, please add a translation on
+https://translate.dokuwiki.org/plugin/copy2clipboard .
 
 ===== Change Log =====
 
@@ -45,12 +77,21 @@ There is nothing to configure. If you want that this plugin uses your language, 
 
 ===== Known Bugs and Issues =====
 
-Issues, bug, suggestions should onlu be discussed on [[https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/issues|github issues]] page.
+  * lone NO-BREAK SPACEs, (aka NBSP, aka [[https://www.fileformat.info/info/unicode/char/00a0/index.htm|U+00A0]]) on a line by themselves are not copied to the clipboard.
+    * This is not a bug but a feature. A lone NBSP almost never happens intentionally in a source code, so this will virtually break no code. On the other hand, geshi which is used by DokuWiki adds it to every empty lines, making empty lines non empty. Moreover, U+00A0 is not a white space, and it causes syntax error in programming languages, or formatted text file such as YAML or LDIF. The benefit of removing this character is much greater than the drawback of keeping it.
+
+Issues, bug, suggestions should only be discussed on
+[[https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/issues|github
+issues]] page.
+
+Please note that issues relating to browser compatibility will not be fixed (by the author).
 
 ===== FAQ =====
 
 
 ===== Discussion =====
 
-Please, either use [[https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/issues|github issue]] page or use the [[.:dokuwiki-plugin-copy2clipboard:discussion|discussion]] page so this page stays as clear and simple as possible.
+Please, use
+[[https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/issues|github issue]] page
+so this page stays as clear and simple as possible.
 
