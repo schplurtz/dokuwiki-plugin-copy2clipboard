@@ -27,7 +27,7 @@ jQuery(function() {
   var iswin = (navigator.appVersion.indexOf("Win") != -1);
   var response=async function(event) {
     try {
-      let text=''
+      let text='';
       // when line numbers are on, geshi uses <li> tag for each line
       let lis=event.target.parentElement.getElementsByTagName('li');
       if( lis.length ) {
