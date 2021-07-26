@@ -1,15 +1,18 @@
 div.dokuwiki {
-  pre.cp2clip {
+  div.cp2clipcont {
     position: relative;
-  }
-  button.cp2clip {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #bbb url( 'clipmini.svg' ) 0 0 no-repeat;
-    background-size: 12px; /*15px;*/
-    width: 13px; /*17px;*/
-    height: 18px; /*22px;*/
+    margin:0;
+    padding:0;
+    border: none;
+    & button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #bbb url( 'clipmini.svg' ) 0 0 no-repeat;
+      background-size: 12px; /*15px;*/
+      width: 13px; /*17px;*/
+      height: 18px; /*22px;*/
+    }
   }
 }
 .cp2clipmsg {
