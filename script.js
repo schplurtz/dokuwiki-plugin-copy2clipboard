@@ -68,10 +68,14 @@ jQuery(function() {
 
   // iterate over all <pre> node and create the needed structure.
   // <pre>...</pre> ==> <div class="cp2clipcont"><pre>...</pre><button /></div>
+  let sup='desktop';
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+    sup='mobile';
+  let classes=['cp2clipcont', sup];
   document.querySelectorAll('pre.code,pre.file').forEach(function(elem) {
     // wrap current node in a div. See https://stackoverflow.com/a/46595686/1831273
     let container=document.createElement('div');
-    container.classList.add('cp2clipcont');
+    container.classList.add(...classes);
     elem.parentNode.insertBefore(container, elem);
     elem.previousElementSibling.appendChild(elem);
 

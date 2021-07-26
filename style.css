@@ -13,6 +13,12 @@ div.dokuwiki {
       width: 13px; /*17px;*/
       height: 18px; /*22px;*/
     }
+    &.desktop button {
+      visibility: hidden;
+    }
+    &.desktop:hover button {
+      visibility: visible;
+    }
   }
 }
 .cp2clipmsg {
