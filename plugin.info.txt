@@ -1,7 +1,7 @@
 base   copy2clipboard
 author Schplurtz le Déboulonné
 email  Schplurtz@laposte.net
-date   2021-07-26
+date   2022-03-06
 name   copy2clipboard plugin
 desc   adds button to copy <code> and <file> content to clipboard
 url    https://www.dokuwiki.org/plugin:copy2clipboard
