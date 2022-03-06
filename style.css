@@ -4,6 +4,7 @@ div.dokuwiki {
     margin:0;
     padding:0;
     border: none;
+    overflow: auto;
     & button {
       position: absolute;
       top: 0;
