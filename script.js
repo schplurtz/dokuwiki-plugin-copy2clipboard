@@ -58,10 +58,8 @@ jQuery(function() {
         text=text.replace(/\n/g, '\r\n' );
       }
       await navigator.clipboard.writeText(text);
-      // console.log( "copié >>>" + text + "<<<" );
       messageBox('cp2clipok', LANG.plugins.copy2clipboard.copied);
     } catch (err) {
-      // console.error('Failed to copy!', err);
       messageBox('cp2clipnok', LANG.plugins.copy2clipboard.error);
     }
   };
@@ -81,9 +79,15 @@ jQuery(function() {
 
     let cpbutton = document.createElement('button');
     cpbutton.setAttribute( 'title', LANG.plugins.copy2clipboard.title);
-    //cpbutton.classList.add('cp2clip');
+    // In order to maintain vertical alignment use the margin-top of the <pre>
+    // elem for the container and set the <pre> elem margin-top to 0.
+    let marginTop=window.getComputedStyle(elem)['margin-top'];
+    if( marginTop != "0px" ) {
+      container.style['margin-top'] = marginTop;
+      elem.style['margin-top']=0;
+    }
     container.appendChild(cpbutton);
-    cpbutton.addEventListener('click', response)
+    cpbutton.addEventListener('click', response);
   })
 });
 
