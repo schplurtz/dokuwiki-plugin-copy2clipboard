@@ -79,6 +79,13 @@ jQuery(function() {
 
     let cpbutton = document.createElement('button');
     cpbutton.setAttribute( 'title', LANG.plugins.copy2clipboard.title);
+    // In order to maintain vertical alignment use the margin-top of the <pre>
+    // elem for the container and set the <pre> elem margin-top to 0.
+    let marginTop=window.getComputedStyle(elem)['margin-top'];
+    if( marginTop != "0px" ) {
+      container.style['margin-top'] = marginTop;
+      elem.style['margin-top']=0;
+    }
     container.appendChild(cpbutton);
     cpbutton.addEventListener('click', response);
   })
