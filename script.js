@@ -86,6 +86,12 @@ jQuery(function() {
       container.style['margin-top'] = marginTop;
       elem.style['margin-top']=0;
     }
+    // Do the same for margin-bottom.
+    let marginBottom=window.getComputedStyle(elem)['margin-bottom'];
+    if( marginBottom != "0px" ) {
+      container.style['margin-bottom'] = marginBottom;
+      elem.style['margin-bottom']=0;
+    }
     container.appendChild(cpbutton);
     cpbutton.addEventListener('click', response);
   })
