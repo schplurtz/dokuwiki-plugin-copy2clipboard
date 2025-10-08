@@ -1,4 +1,7 @@
 div.dokuwiki {
+  .code-copy-btn {
+    display: none !important;
+  }
   div.cp2clipcont {
     position: relative;
     margin:0;
