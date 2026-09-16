@@ -1,16 +1,22 @@
-copy2clipboard Plugin for DokuWiki
+# Copy2Clipboard Plugin for DokuWiki
 
-Add button to copy `<code>` and `<file>` content to clipboard.
+**Development has stopped** as DokuWiki version 2026-07-14 "Mort" and newer include this functionality natively.
 
-All documentation for this plugin can be found at
-https://www.dokuwiki.org/plugin:copy2clipboard
+This plugin adds a button to copy the content of `<code>` and `<file>` blocks to the clipboard.
 
-Please refer to https://www.dokuwiki.org/plugins for additional info
-on how to install plugins in DokuWiki.
+---
+## Compatibility
+Only use this plugin with DokuWiki versions **up to 2025-05-14 "Librarian"**.
+For newer versions, a built-in copy-to-clipboard system is available.
+If you *must* use this plugin on "Mort" or later, see [#20](https://github.com/schplurtz/dokuwiki-plugin-copy2clipboard/issues/20) for a workaround.
 
-Copyright (C) 2020, 2021 Schplurtz le Déboulonné <Schplurtz@laposte.net>
+---
+## Documentation
+- Plugin documentation: [dokuwiki.org/plugin:copy2clipboard](https://www.dokuwiki.org/plugin:copy2clipboard)
+- General plugin installation guide: [dokuwiki.org/plugins](https://www.dokuwiki.org/plugins)
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of the CECILL 2.1 free license. See files
-LICENSE and LICENSE-fr for the details.
-
+---
+## License
+Copyright (C) 2020, 2021, 2026 Schplurtz le Déboulonné `<Schplurtz@laposte.net>`
+This program is free software under the **CECILL 2.1** license.
+See `LICENSE` and `LICENSE-fr` for details.
